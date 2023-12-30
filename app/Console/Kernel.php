@@ -49,7 +49,7 @@ class Kernel extends ConsoleKernel
                         'aid' => 1,
                         'point' => 0,
                         'cash' => $transfer->cash,
-                        'status' => 1,
+                        'status' => 0,
                         'creatime' => Carbon::now()
                     ]);
                     DB::table( 'pweb_transfer' )->where( 'user_id', $transfer->user_id )->where( 'zone_id', $transfer->zone_id )->where( 'cash', $transfer->cash )->take( 1 )->delete();
